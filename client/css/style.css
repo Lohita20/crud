@@ -5,4 +5,5 @@ body
     background-image: url("https://lonelyplanetimages.imgix.net/copilot/images/interest/food-and-drink.jpg?auto=compress&h=800");
     background-repeat: no-repeat;
     background-size: 1600px 1200px;
+    background-image: "cover";
 }

@@ -1,7 +1,8 @@
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Add Food Details</h3>
+<div class="panel panel-default" style="opacity: 0.8">
+  <div class="panel-heading" style="background-color: black">
+    <h3 class="panel-title" style="text-decoration-color:antiquewhite" >Add Food Details</h3>
+      
   </div>
   <div class="panel-body">
     <div class="row">
@@ -9,12 +10,14 @@
       <form ng-submit="addFoodStore()">
         <div class="form-group">
           <label>Item</label>
-          <input type="text" class="form-control" ng-model="food.item" placeholder="Item">
+          <input type="text" class="form-control" ng-model="food.item" placeholder="Item" required>
         </div>
         <div class="form-group">
           <label>Cuisine</label>
-          <select ng-model="food.cuisine" class="form-control">
-            <option value="Caribbean">Caribbean</option>
+          <select ng-model="food.cuisine" class="form-control" required>
+              <option value="">select your option</option>
+            <option value="Caribbean" selected>Caribbean</option>
+              
             <option value="Chinese">Chinese</option>
             <option value="Continental">Continental</option>
             <option value="North_Indian">North_Indian</option>
@@ -27,39 +30,51 @@
 
         <div class="form-group">
           <label>Type</label>
-          <input type="radio" name="type" ng-model="food.type" value="Veg" checked> Veg<br>
+          <input type="radio" name="type" ng-model="food.type" value="Veg" checked required> Veg<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="type" ng-model="food.type" value="Non_Veg"> Non_Veg<br> 
         </div>
         <div class="form-group">
           <label>Cost</label>
-          <input type="number" class="form-control" ng-model="food.cost" placeholder="Cost" onkeypress="return isNumberKey(event)>
+          <input type="number"  step="any"  class="form-control" ng-model="food.cost" placeholder="Cost" required>
         
-          function isNumberKey(evt){
-    var charCode = (evt.which) ? evt.which : event.keyCode
-   if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
-        return false;
-    return true;
-}
-         
+        
          </div>
 
         <div class="form-group">
           <label>Image</label>
-          <input type="text" class="form-control" ng-model="food.pic" placeholder="Image">
+          <input type="url" class="form-control" ng-model="food.pic" placeholder="Image">
         </div>
         <div class="form-group">
           <label>Buy URL</label>
-          <input type="text" class="form-control" ng-model="food.url" placeholder="Buy URL">
+          <input type="url" class="form-control" ng-model="food.url" placeholder="Buy URL">
         </div>
-       
-        <button target="#/foodstore" type="submit" class="btn btn-default">Submit</button>
+       <!-- <div class="container">            
+            <ul class="pager">
+                <li><a target="#/foodstore" type="submit" class="btn btn-success">Submit</a></li>
+                <li><a href="#/foodstore" class="btn btn-danger">Cancel</a></li>
+            </ul>
+        </div>-->
           
-          <div class="pull-right">
-            <a href="#/foodstore">Go Back</a>
-          </div>
+      <!--  <button target="#/foodstore" type="submit" class="btn btn-success">Submit</class="btn btn-default">
           
+          <div class="pull-center">
+            <a href="#/foodstore">Cancel</a>
+          </div>-->
+          <center>
+          <button type="submit" style="color:black;" class="btn btn-success">Save</button>
+<a href="#/home.html" class="btn btn-danger"> Cancel</a>
+</center>
+
       </form>
     </div>
     </div>
   </div>
 </div>
+<footer>
+  <center><p><b>Amulya Priydarshini konathala @ MSS</b></p></center>
+</footer>
+
+
+
+
+

@@ -1,9 +1,6 @@
-<div class="panel panel-default" ng-init="getFoodStores()">
-  <div class="panel-heading" style="background-image:none;background: Grey">
-    <h3 class="panel-title" >Menu_Items</h3>
-  </div>
-    
- 
+<div class="panel panel-default" style="opacity: 0.8" ng-init="getFoodStores()">
+  <div class="panel-heading" style="background-color: black">
+    <h3 class="panel-title" >Menu Items</h3> 
   <div class="panel-body">
     <div class="row">
     	<div ng-repeat="food in foods">
@@ -12,17 +9,30 @@
             
     		<div class="col-md-6">
     			<div class="col-md-6">
+                  
     				<h2>{{food.item}}</h2>
+                    
     				<p>{{food.type}}</p>
-                    <p>{{food.cost}}</p>
-    				<a class="btn btn-primary" href="#/foodstore/details/{{food._id}}">View Details</a>
+                    <p>${{food.cost}}</p>
+                    
+                    <div class="btn-group" >
+    <a href="#/foodstore/details/{{food._id}}" class="btn btn-primary">View</a>
+    <a href="#/foodstore/edit/{{food._id}}"class="btn btn-primary">Edit</a>
+     <a class="btn btn-primary" href="#" ng-click="removeFoodStore(food._id)">Delete</a>
+                        
+  </div>
+                    
+    				<!--<a class="btn btn-primary" href="#/foodstore/details/{{food._id}}">View Details</a>-->
     			</div>
     			<div class="col-md-6">
-    				<img class="thumbnail" ng-src="{{food.pic}}" height="140" width="20">
+                      <img src="{{food.url}}" onerror="this.onerror=null; this.src='http://www4.pictures.zimbio.com/mp/LGqFU5M6JsPl.jpg';" >
+    			<!--	<img class="thumbnail" ng-src="{{food.pic}}" height="140" width="20">-->
     			</div>
+                 
+</div>
     		</div>
-    	
-    </div>
+           
+        </div>     
   </div>
       
     </div>

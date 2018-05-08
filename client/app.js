@@ -3,7 +3,7 @@ var myApp = angular.module('myApp',['ngRoute']);
 myApp.config(function($routeProvider){
 	$routeProvider.when('/', {
 		controller:'foodstoreController',
-		templateUrl: 'views/foodstore.html'
+		templateUrl: 'views/home.html'
 	})
 	.when('/foodstore', {
 		controller:'foodstoreController',

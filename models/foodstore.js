@@ -21,12 +21,10 @@ const foodstoreSchema = mongoose.Schema({
         required: true
 	},
 	pic:{
-		type: String,
-        required: true
+		type: String
 	},
 	url:{
-		type: String,
-        required: true
+		type: String    
 	},
 	create_date:{
 		type: Date,

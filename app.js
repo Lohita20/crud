@@ -16,7 +16,7 @@ mongoose.connection.once('open',()=>{
 })
 //var db = mongodb.connection;
 
-app.get('/', (req, res) => {
+app.get('/items/details/{{item._id}}', (req, res) => {
 	res.send('Please use /api/foodstore');
 });
 
