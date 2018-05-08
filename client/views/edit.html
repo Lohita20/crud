@@ -1,0 +1,51 @@
+<a href="#/foodstore">Go Back</a>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">update food details</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form ng-submit="updateFoodStore()" ng-init="getFoodStore()">
+        <div class="form-group">
+          <label>Item</label>
+          <input type="text" class="form-control" ng-model="food.item" placeholder="Item">
+        </div>
+        <div class="form-group">
+          <label>Cuisine</label>
+          <select ng-model="food.cuisine" class="form-control">
+            <option value="Caribbean">Caribbean</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Continental">Continental</option>
+            <option value="North_Indian">North_Indian</option>
+            <option value="South_Indian">South_Indian</option>
+        
+          </select>
+        </div>
+       
+        <div class="form-group">
+          <label>Type</label>
+          <input type="radio" name="type" ng-model="food.type" value="Veg" checked> Veg<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="type" ng-model="food.type" value="Non_Veg"> Non_Veg<br> 
+        </div>
+        <div class="form-group">
+          <label>Cost</label>
+          <input type="text" class="form-control" ng-model="food.cost" placeholder="Cost">
+        </div>
+        
+         
+        <div class="form-group">
+            <label>Image</label>
+          <input type="text" class="form-control" ng-model="food.pic" placeholder="Image">
+        </div>
+        <div class="form-group">
+          <label>Buy URL</label>
+          <input type="text" class="form-control" ng-model="food.url" placeholder="Buy URL">
+        </div>
+       
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
