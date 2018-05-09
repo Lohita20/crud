@@ -1,15 +1,14 @@
 
-<div class="panel panel-default" ng-init="getFoodStore()">
+<div class="panel panel-default" ng-init="getFoodStore()" style="opacity: 0.8">
   <div class="panel-heading">
     <h3 class="panel-title">{{food.item}}</h3>
   </div>
-<!--    <div class="col-md-4">
-<img src="{{food.url}}" onerror="this.onerror=null; this.src='http://www4.pictures.zimbio.com/mp/LGqFU5M6JsPl.jpg';" >
-</div>      -->
+
   <div class="panel-body">
     
       <div class="col-md-4">
-        <img src="{{food.pic}}" onerror="this.onerror=null; this.src='http://www4.pictures.zimbio.com/mp/LGqFU5M6JsPl.jpg';">
+        <img class="thumbnail" src="{{food.pic}}" alt=" Sorry, No preview available" >
+                                                                                                                    
       </div>
       <div class="col-md-8">
         
@@ -17,21 +16,16 @@
           <li class="list-group-item">Cuisine: {{food.cuisine}}</li>
          
           <li class="list-group-item">Type: {{food.type}}</li>
-          <li class="list-group-item">Cost:₹ {{food.cost}}</li>
+          <li class="list-group-item">Cost:$ {{food.cost}}</li>
         </ul>
+
         <a target="_blank" href="{{food.url}}" class="btn btn-primary">Order Now</a>
           
-        
-      <!--      <div class="pull-bottom">
-              
-            <div class="pull-right">
-  <a href="#/foodstore/edit/{{food._id}}">Edit</a> |  <a href="#" ng-click="removeFoodStore(food._id)">Delete</a>
-  </div>
-           </div>-->
+   <br><br><br><br>
           
           <div class="pull-left">
               
-            <a href="#/foodstore">Go Back</a>
+            <a href="#/foodstore" >Go Back</a>
           </div>
       </div>
     

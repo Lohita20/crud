@@ -17,7 +17,7 @@ const foodstoreSchema = mongoose.Schema({
         required: true
 	},
 	cost:{
-		type: String,
+		type: Number,
         required: true
 	},
 	pic:{
